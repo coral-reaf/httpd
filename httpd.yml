@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+    - name: httpd install & Serivce config
+      yum:
+        name: httpd
+        state: latest
+    - name: httpd running & Enabled
+      service:
+        name: httpd
+        state: started
+        enabled: yes
